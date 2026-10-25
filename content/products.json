@@ -1,0 +1,24 @@
+{
+  "$schema": "./schemas/products.schema.json",
+  "products": [
+    {
+      "slug": "peepalrp",
+      "name": "PeepalRP",
+      "logo": "/products/peepal.svg",
+      "category": "Multi-tenant ERP",
+      "status": "Available",
+      "tagline": "One system to run your institution.",
+      "summary": "An all-in-one, multi-tenant ERP for hospitals and colleges. Every department works from one realtime platform, and billing and inventory follow a single traceable chain: item masters, vendors, purchase orders, dispatch to the patient, pending charges, bills and payments.",
+      "features": [
+        "One platform for every department, so nothing falls through the gaps",
+        "Every rupee tracked from purchase to payment, with a clear audit trail",
+        "Faster journeys for the people you serve, from first appointment to final bill",
+        "GST-ready bills that cut errors and speed up collections",
+        "Recurring charges added automatically, so nothing goes unbilled",
+        "Live updates for every team, so everyone works from the same facts",
+        "Stock you can trust, with less wastage and fewer stockouts",
+        "Multi-tenant by design, so each organization gets its own secure, separate workspace"
+      ]
+    }
+  ]
+}

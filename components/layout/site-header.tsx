@@ -32,7 +32,7 @@ export function SiteHeader() {
                 </motion.div>
 
                 <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
-                    {siteConfig.nav.slice(0, 3).map((item) => {
+                    {siteConfig.nav.filter((item) => item.href !== "/contact").map((item) => {
                         const active = pathname.startsWith(item.href);
                         return (
                             <Link

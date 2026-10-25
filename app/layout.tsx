@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk } from "next/font/google";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { MotionProvider } from "@/components/motion/motion-provider";
@@ -29,6 +32,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                     <main>{children}</main>
                     <SiteFooter />
                 </MotionProvider>
+                <GoogleAnalytics />
+                <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );

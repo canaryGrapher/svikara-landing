@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHero } from "@/components/shared/page-hero";
 import { SampleBadge } from "@/components/shared/sample-badge";
 import { TestimonialsGrid } from "@/components/testimonials/testimonials-grid";
 import { CtaBand } from "@/components/shared/cta-band";
 import { hasSampleTestimonials } from "@/lib/content/testimonials";
+import { features } from "@/lib/site-config";
 
 export const metadata: Metadata = {
     title: "Testimonials",
@@ -11,6 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default function TestimonialsPage() {
+    if (!features.testimonials) notFound();
+
     return (
         <>
             <PageHero

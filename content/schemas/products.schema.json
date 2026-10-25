@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Svikara products",
+  "type": "object",
+  "required": [
+    "products"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug",
+          "name",
+          "category",
+          "status",
+          "tagline",
+          "summary",
+          "features"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Lowercase id used in links, for example peepalrp"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "logo": {
+            "type": "string",
+            "pattern": "^/",
+            "description": "Optional path to the app logo (SVG or PNG) inside /public, for example /products/peepalrp.svg"
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Short label, for example Healthcare software"
+          },
+          "status": {
+            "enum": [
+              "In development",
+              "Early access",
+              "Available"
+            ]
+          },
+          "tagline": {
+            "type": "string",
+            "minLength": 1
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1,
+            "description": "One or two sentences on what the product does"
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Short feature labels"
+          }
+        }
+      }
+    }
+  }
+}

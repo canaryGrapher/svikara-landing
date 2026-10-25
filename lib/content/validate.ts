@@ -60,3 +60,11 @@ export function requireOneOf<T extends string>(
     }
     return value as T;
 }
+
+export function requireTextList(file: string, i: number, entry: Entry, field: string): string[] {
+    const value = entry[field];
+    if (!Array.isArray(value) || value.length === 0 || value.some((v) => typeof v !== "string" || v.trim() === "")) {
+        throw new ContentError(file, i, `"${field}" is required and must be a list of text values`);
+    }
+    return value.map((v) => (v as string).trim());
+}
