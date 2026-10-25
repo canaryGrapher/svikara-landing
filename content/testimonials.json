@@ -1,0 +1,59 @@
+{
+  "$schema": "./schemas/testimonials.schema.json",
+  "testimonials": [
+    {
+      "quote": "Sample quote. Describe the problem you had, what Svikara did, and the result in one or two sentences.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "service": "Cybersecurity",
+      "result": "Result headline",
+      "featured": true,
+      "sample": true
+    },
+    {
+      "quote": "Sample quote. A short line about working with the team on a web or mobile product and how launch went.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "service": "Development",
+      "result": "Result headline",
+      "featured": true,
+      "sample": true
+    },
+    {
+      "quote": "Sample quote. What the consulting engagement helped decide, and what changed afterwards.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "service": "Consulting",
+      "result": "Result headline",
+      "featured": true,
+      "sample": true
+    },
+    {
+      "quote": "Sample quote. Keep real testimonials specific: numbers, timelines and outcomes persuade more than praise.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "service": "Cybersecurity",
+      "sample": true
+    },
+    {
+      "quote": "Sample quote. A second development client, ideally from a different industry to show range.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "service": "Development",
+      "sample": true
+    },
+    {
+      "quote": "Sample quote. A founder or CTO talking about the value of a senior second opinion.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "service": "Consulting",
+      "sample": true
+    }
+  ]
+}

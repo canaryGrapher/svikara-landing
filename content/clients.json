@@ -1,0 +1,45 @@
+{
+  "$schema": "./schemas/clients.schema.json",
+  "clients": [
+    {
+      "name": "Client name",
+      "sector": "Fintech",
+      "kind": "client"
+    },
+    {
+      "name": "Client name",
+      "sector": "Healthcare",
+      "kind": "client"
+    },
+    {
+      "name": "Client name",
+      "sector": "SaaS",
+      "kind": "client"
+    },
+    {
+      "name": "Client name",
+      "sector": "E-commerce",
+      "kind": "client"
+    },
+    {
+      "name": "Client name",
+      "sector": "Education",
+      "kind": "client"
+    },
+    {
+      "name": "Client name",
+      "sector": "Logistics",
+      "kind": "client"
+    },
+    {
+      "name": "Partner name",
+      "sector": "Cloud platform",
+      "kind": "technology-partner"
+    },
+    {
+      "name": "Partner name",
+      "sector": "Security tooling",
+      "kind": "technology-partner"
+    }
+  ]
+}

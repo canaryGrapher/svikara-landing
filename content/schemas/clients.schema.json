@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Svikara clients and partners",
+  "type": "object",
+  "required": ["clients"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "clients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "sector", "kind"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1, "description": "Company name as it should appear on the site" },
+          "sector": { "type": "string", "minLength": 1, "description": "Industry or category, for example Fintech" },
+          "kind": {
+            "enum": ["client", "technology-partner"],
+            "description": "client appears under Clients; technology-partner under Technology partners"
+          },
+          "logo": {
+            "type": "string",
+            "pattern": "^/",
+            "description": "Optional logo path inside /public, for example /partners/acme.svg"
+          },
+          "sample": { "type": "boolean", "description": "true marks a placeholder; remove it for real clients" }
+        }
+      }
+    }
+  }
+}

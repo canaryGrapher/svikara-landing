@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Svikara testimonials",
+  "type": "object",
+  "required": ["testimonials"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "testimonials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["quote", "name", "role", "company", "service"],
+        "additionalProperties": false,
+        "properties": {
+          "quote": { "type": "string", "minLength": 1, "description": "The client's words, without quote marks" },
+          "name": { "type": "string", "minLength": 1 },
+          "role": { "type": "string", "minLength": 1, "description": "Job title, for example CTO" },
+          "company": { "type": "string", "minLength": 1 },
+          "service": {
+            "enum": ["Cybersecurity", "Development", "Consulting"],
+            "description": "Used for the filter on the Testimonials page"
+          },
+          "result": { "type": "string", "description": "Optional headline result, for example Passed ISO 27001 audit" },
+          "featured": { "type": "boolean", "description": "true shows it in the stacked cards on the home page" },
+          "sample": { "type": "boolean", "description": "true marks a placeholder; remove it for real testimonials" }
+        }
+      }
+    }
+  }
+}
