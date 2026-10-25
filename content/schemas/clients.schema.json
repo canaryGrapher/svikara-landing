@@ -9,11 +9,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "sector", "kind"],
+        "required": ["name", "kind"],
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string", "minLength": 1, "description": "Company name as it should appear on the site" },
-          "sector": { "type": "string", "minLength": 1, "description": "Industry or category, for example Fintech" },
+          "sector": { "type": "string", "minLength": 1, "description": "Optional industry or category, for example Fintech" },
           "kind": {
             "enum": ["client", "technology-partner"],
             "description": "client appears under Clients; technology-partner under Technology partners"

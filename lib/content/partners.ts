@@ -10,7 +10,8 @@ const KINDS = ["client", "technology-partner"] as const;
 
 export interface Partner {
     name: string;
-    sector: string;
+    /** Optional industry or category, shown under the name when there is no logo */
+    sector?: string;
     kind: (typeof KINDS)[number];
     /** Optional path to an SVG or PNG logo in /public */
     logo?: string;
@@ -25,7 +26,7 @@ function parse(raw: unknown): Partner[] {
         }
         return {
             name: requireText(FILE, i, entry, "name"),
-            sector: requireText(FILE, i, entry, "sector"),
+            sector: optionalText(FILE, i, entry, "sector"),
             kind: requireOneOf(FILE, i, entry, "kind", KINDS),
             logo,
             sample: optionalFlag(FILE, i, entry, "sample"),

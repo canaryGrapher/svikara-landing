@@ -2,44 +2,28 @@
   "$schema": "./schemas/clients.schema.json",
   "clients": [
     {
-      "name": "Client name",
-      "sector": "Fintech",
-      "kind": "client"
+      "name": "Salox Services Limited",
+      "sector": "Tech Services",
+      "kind": "client",
+      "logo": "/partners/salox.png"
     },
     {
-      "name": "Client name",
+      "name": "Nexis Multispeciality Hospital",
       "sector": "Healthcare",
-      "kind": "client"
+      "kind": "client",
+      "logo": "/partners/nexis.png"
     },
     {
-      "name": "Client name",
-      "sector": "SaaS",
-      "kind": "client"
+      "name": "Dentisterié",
+      "sector": "Healthcare",
+      "kind": "client",
+      "logo": "/partners/dentisterie.svg"
     },
     {
-      "name": "Client name",
-      "sector": "E-commerce",
-      "kind": "client"
-    },
-    {
-      "name": "Client name",
-      "sector": "Education",
-      "kind": "client"
-    },
-    {
-      "name": "Client name",
-      "sector": "Logistics",
-      "kind": "client"
-    },
-    {
-      "name": "Partner name",
-      "sector": "Cloud platform",
-      "kind": "technology-partner"
-    },
-    {
-      "name": "Partner name",
-      "sector": "Security tooling",
-      "kind": "technology-partner"
+      "name": "CybSec",
+      "sector": "Tech Services",
+      "kind": "client",
+      "logo": "/partners/cybsec.png"
     }
   ]
 }

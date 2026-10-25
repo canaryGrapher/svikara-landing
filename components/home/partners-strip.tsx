@@ -35,7 +35,7 @@ export function PartnersStrip() {
                 {rows.map((row, r) => (
                     <Marquee key={r} speed={r === 0 ? 1.6 : -1.6}>
                         {row.map((p, i) => (
-                            <PartnerTile key={`${p.sector}-${i}`} partner={p} className="mr-4 min-w-60" />
+                            <PartnerTile key={`${p.name}-${i}`} partner={p} className="mr-4 min-w-60" />
                         ))}
                     </Marquee>
                 ))}

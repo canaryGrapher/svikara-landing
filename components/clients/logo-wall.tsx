@@ -29,7 +29,7 @@ export function LogoWall() {
                             <h3 className="text-lg font-semibold text-ink">{group.title}</h3>
                             <RevealGroup as="ul" className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                                 {list.map((p, i) => (
-                                    <motion.li key={`${p.sector}-${i}`} variants={revealItem}>
+                                    <motion.li key={`${p.name}-${i}`} variants={revealItem}>
                                         <PartnerTile partner={p} className="h-24" />
                                     </motion.li>
                                 ))}

@@ -2,7 +2,7 @@
 import type { Partner } from "@/lib/content/partners";
 import { cn } from "@/lib/utils";
 
-/** A partner or client logo. Without a logo file it shows a neutral placeholder tile. */
+/** A partner or client tile: logo (or an initial when there is none) beside the name and optional sector. */
 export function PartnerTile({ partner, className }: { partner: Partner; className?: string }) {
     return (
         <div
@@ -13,21 +13,19 @@ export function PartnerTile({ partner, className }: { partner: Partner; classNam
             )}
         >
             {partner.logo ? (
-                <img src={partner.logo} alt={partner.name} className="h-8 w-auto max-w-[9rem] object-contain" />
+                <img src={partner.logo} alt="" className="size-9 shrink-0 rounded-lg object-contain" />
             ) : (
-                <>
-                    <span
-                        aria-hidden
-                        className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-secondary text-sm font-bold text-royal"
-                    >
-                        {partner.sector.charAt(0)}
-                    </span>
-                    <span className="flex flex-col leading-tight">
-                        <span className="font-semibold text-ink">{partner.name}</span>
-                        <span className="text-sm text-muted">{partner.sector}</span>
-                    </span>
-                </>
+                <span
+                    aria-hidden
+                    className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-secondary text-sm font-bold text-royal"
+                >
+                    {partner.name.charAt(0)}
+                </span>
             )}
+            <span className="flex flex-col leading-tight">
+                <span className="font-semibold text-ink">{partner.name}</span>
+                {partner.sector && <span className="text-sm text-muted">{partner.sector}</span>}
+            </span>
         </div>
     );
 }
