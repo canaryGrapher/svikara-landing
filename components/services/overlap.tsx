@@ -24,7 +24,7 @@ export function Overlap() {
                 <div>
                     <SectionHeading id="overlap-title" title="Where building and securing meet.">
                         Plenty of firms write software. Plenty test it for holes. We do both, which is
-                        what the two arcs in our logo stand for.
+                        what the two halves of the S in our logo stand for.
                     </SectionHeading>
 
                     <dl className="mt-12 grid gap-8">

@@ -2,10 +2,16 @@
   "$schema": "./schemas/clients.schema.json",
   "clients": [
     {
-      "name": "Salox Services Limited",
+      "name": "Alyssum Global Services",
       "sector": "Tech Services",
       "kind": "client",
-      "logo": "/partners/salox.png"
+      "logo": "/partners/alyssum.png"
+    },
+    {
+      "name": "JRK Infotech Solutions",
+      "sector": "Tech Services",
+      "kind": "client",
+      "logo": "/partners/jrk.png"
     },
     {
       "name": "Nexis Multispeciality Hospital",

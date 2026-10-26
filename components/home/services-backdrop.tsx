@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, useTransform, type MotionValue } from "framer-motion";
-import { LOGO_VIEWBOX, SKY_ARC, ROYAL_ARC } from "@/components/brand/logo-geometry";
+import { MARK_VIEWBOX, PIXELS, S_LOWER, S_UPPER } from "@/components/brand/logo-paths";
 
 interface ServicesBackdropProps {
     /** Scroll progress of the pinned services section, 0..1 */
@@ -21,7 +21,7 @@ const EDGE_MASK = "linear-gradient(180deg, transparent 0%, #000 22%, #000 70%, t
 
 /**
  * Abstract backdrop for the services scroller: drifting colour blobs, a dot grid,
- * and the two logo arcs drawn large in outline, turning as the visitor scrolls.
+ * and the logo S drawn large in outline, turning as the visitor scrolls.
  * The base gradient is an inline style so the section is never see-through.
  */
 export function ServicesBackdrop({ progress }: ServicesBackdropProps) {
@@ -59,14 +59,18 @@ export function ServicesBackdrop({ progress }: ServicesBackdropProps) {
                 />
 
                 <motion.svg
-                    viewBox={LOGO_VIEWBOX}
+                    viewBox={MARK_VIEWBOX}
                     fill="none"
-                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={4}
                     className="absolute -right-[12%] top-1/2 h-[120vh] w-auto -translate-y-1/2 opacity-[0.16]"
                     style={reduce ? undefined : { rotate: spin, x: drift }}
                 >
-                    <path d={SKY_ARC} stroke="var(--color-sky)" strokeWidth={6} />
-                    <path d={ROYAL_ARC} stroke="var(--color-royal)" strokeWidth={6} />
+                    <path d={S_UPPER} stroke="var(--color-royal)" />
+                    <path d={S_LOWER} stroke="var(--color-sky)" />
+                    {PIXELS.map((p) => (
+                        <rect key={`${p.x}-${p.y}`} x={p.x} y={p.y} width={p.size} height={p.size} stroke="var(--color-royal)" />
+                    ))}
                 </motion.svg>
 
                 <motion.svg

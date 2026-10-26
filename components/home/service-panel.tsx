@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element -- remote stock photography */
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { LogoMark } from "@/components/brand/logo-mark";
+import { LogoMark, type MarkPart } from "@/components/brand/logo-mark";
 import type { Service, ServiceKind } from "@/lib/content/services";
 
-/** Security wears the outer arc, development the inner, consulting joins both. */
-export const glyphArcs: Record<ServiceKind, "outer" | "inner" | "both"> = {
-    security: "outer",
-    development: "inner",
-    consulting: "both",
+/** Security wears the top half of the S, development the bottom half, consulting the whole mark. */
+export const glyphParts: Record<ServiceKind, MarkPart> = {
+    security: "upper",
+    development: "lower",
+    consulting: "full",
 };
 
 export function ServicePanel({ service }: { service: Service }) {
@@ -23,7 +23,7 @@ export function ServicePanel({ service }: { service: Service }) {
 
             <div className="relative p-7 sm:p-10">
                 <span className="flex size-14 items-center justify-center rounded-2xl bg-white/95">
-                    <LogoMark arcs={glyphArcs[service.kind]} className="h-8" />
+                    <LogoMark part={glyphParts[service.kind]} className="h-9" />
                 </span>
                 <h3 className="mt-6 text-3xl font-bold tracking-[-0.025em] sm:text-4xl">{service.title}</h3>
                 <p className="mt-3 max-w-[40ch] text-lg text-white/80">{service.summary}</p>

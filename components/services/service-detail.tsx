@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { LogoMark } from "@/components/brand/logo-mark";
-import { glyphArcs } from "@/components/home/service-panel";
+import { glyphParts } from "@/components/home/service-panel";
 import { ParallaxImage } from "@/components/motion/parallax-image";
 import { Reveal, RevealGroup, revealItem } from "@/components/motion/reveal";
 import { SplitHeading } from "@/components/motion/split-heading";
@@ -24,7 +24,7 @@ export function ServiceDetail({ service, flip = false }: { service: Service; fli
 
                 <div>
                     <Reveal y={20}>
-                        <LogoMark arcs={glyphArcs[service.kind]} className="h-12" />
+                        <LogoMark part={glyphParts[service.kind]} className="h-12" />
                     </Reveal>
                     <SplitHeading
                         id={`${service.slug}-title`}

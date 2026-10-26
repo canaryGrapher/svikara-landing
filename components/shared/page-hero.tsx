@@ -12,7 +12,7 @@ interface PageHeroProps {
     children?: ReactNode;
 }
 
-/** Opening block for inner pages: the logo arcs sweep in behind a large headline. */
+/** Opening block for inner pages: the logo mark sweeps in behind a large headline. */
 export function PageHero({ title, intro, children }: PageHeroProps) {
     return (
         <section className="relative overflow-hidden bg-paper pb-20 pt-36 sm:pb-28 sm:pt-44">
