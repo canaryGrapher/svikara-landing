@@ -1,15 +1,1 @@
-<svg width="512" height="512" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Peepal logo">
-  <defs>
-    <linearGradient id="peepal-logo-grad" x1="0" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1f5d36"/>
-      <stop offset="100%" stop-color="#4f9268"/>
-    </linearGradient>
-    <linearGradient id="peepal-logo-grad2" x1="0" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2d7a4a"/>
-      <stop offset="100%" stop-color="#93c2a0"/>
-    </linearGradient>
-  </defs>
-  <rect x="5" y="26" width="9" height="9" rx="2.5" fill="url(#peepal-logo-grad2)" opacity="0.85"/>
-  <rect x="15.5" y="18" width="9" height="17" rx="2.5" fill="url(#peepal-logo-grad2)"/>
-  <path d="M26 10L31.5 5L35 10L35 35L26 35Z" fill="url(#peepal-logo-grad)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" fill="none" aria-label="Peepal logo" viewBox="0 0 40 40"><defs><linearGradient id="peepal-logo-grad" x1="0" x2="40" y1="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1f5d36"/><stop offset="100%" stop-color="#4f9268"/></linearGradient><linearGradient id="peepal-logo-grad2" x1="0" x2="40" y1="40" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2d7a4a"/><stop offset="100%" stop-color="#93c2a0"/></linearGradient></defs><rect width="9" height="9" x="5" y="26" fill="url(#peepal-logo-grad2)" opacity=".85" rx="2.5"/><rect width="9" height="17" x="15.5" y="18" fill="url(#peepal-logo-grad2)" rx="2.5"/><path fill="url(#peepal-logo-grad)" d="M26 10L31.5 5L35 10L35 35L26 35Z"/></svg>
